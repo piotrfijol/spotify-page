@@ -1,3 +1,4 @@
+@use 'partials/menu';
 
 #playlist-page {
     .info {
@@ -37,6 +38,64 @@
 
         &__.description {
             color: var(--text-gray);
+        }
+    }
+
+    .songs {
+        padding: 24px 16px;
+
+        &__action-buttons {
+            display: flex;
+        }
+
+        &__action-buttons > * {
+            margin-left: 32px;
+        }
+
+        &__action-buttons > button:first-child {
+            margin-left: 0;
+        }
+
+        &__action-buttons > button {
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 50%;
+            background: none;
+        }
+
+        &__action-buttons > button:hover {
+            cursor: pointer;
+        }
+
+        &__.play {
+            width: 55px;
+            height: 55px;
+            background-color: #65D36E;
+        }
+
+        &__.play:hover {
+            background-color: rgb(59, 198, 70);
+        }
+
+        &__.play img {
+            margin-top:  10%;
+            margin-left: 10%;
+        }
+
+        &__.favorite {
+            display: flex;
+            align-items: center;
+        
+            svg {
+                fill: #BFBFBF;
+            }
+        }
+
+        &__.favorite:hover svg {
+            transition-duration: 0.1s;
+            transition-timing-function: ease-out;
+            fill: #FEFEFE;
         }
     }
 }
