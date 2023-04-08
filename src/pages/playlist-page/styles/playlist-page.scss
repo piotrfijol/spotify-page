@@ -3,7 +3,7 @@
 #playlist-page {
     .info {
         min-height: 434px;
-        background-image: url('images/playlist-thumbnail.png');
+        background-image: url('images/playlist-thumbnail.jpg');
         background-repeat: no-repeat;
         background-position: 81% 65%;
         background-size: cover;
@@ -96,6 +96,117 @@
             transition-duration: 0.1s;
             transition-timing-function: ease-out;
             fill: #FEFEFE;
+        }
+
+        .song {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: 22px 1fr 1fr;
+            width: 100%;
+            align-items: center;
+            column-gap: 16px;
+            padding: 0 1.5rem;
+            height: 89px;
+            box-sizing: border-box;
+            border-radius: 17px;
+            background-color: #18181C;
+            color: #BFBFBF;
+        
+
+            &__number {
+                font-size: 18px;
+            }
+
+            &__main {
+                display: flex;
+                align-items: center;
+            }
+
+            &__main > img {
+                margin-right: 24px;
+                width: 56px;
+                height: 56px;
+            }
+
+            &__info > p {
+                padding: 0;
+                margin: 6px 0;
+            }
+
+            &__.label {
+                color: #BFBFBF;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            &__.data {
+                color: #FFF;
+                font-weight: 400;
+                font-size: 16px;
+            }
+
+            &__info.author, &__info.duration {
+                display: none;
+            }
+
+            &__menu {
+                grid-column: 4;
+                align-self: center;
+                
+                .menu__dot {
+                    width: 3px;
+                    height: 3px;
+                    margin-right: 2px;
+                }
+            }
+
+        }
+    }
+}
+
+
+@media (min-width: 600px) {
+
+    #playlist-page {
+        .songs {
+            .song {
+                grid-template-columns: 22px 11fr 10fr 1fr;
+            
+                &__info.author {
+                    display: block !important;
+                }
+        
+                &__menu {
+                    grid-column: 5;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 1024px) {
+
+    #playlist-page {
+        .songs {
+            .song {
+                grid-template-columns: 22px 12.4fr 11fr 7fr 1fr;
+                column-gap: 32px;
+                padding-left: 50px;
+                padding-right: 50px;
+
+                &__info.duration {
+                    display: block !important;
+                }
+
+                &__thumbnail img {
+                    margin-right: 32px;
+                }
+
+                &__menu {
+                    grid-column: 6;
+                }
+            }
         }
     }
 }
