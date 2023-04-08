@@ -5,4 +5,28 @@
 body {
   font-family: 'Lato', sans-serif;
   color: var(--text-light);
+  background-color: #000;
+}
+
+.navbar {
+  height: 84px;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+
+  &__back {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+
+
+  }
 }
