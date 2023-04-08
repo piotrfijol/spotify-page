@@ -24,9 +24,22 @@
     </div>
     <div class="songs">
       <div class="songs__action-buttons">
-        <div class="songs__ play"></div>
-        <div class="songs__ favorite"></div>
-        <div class="songs__ menu"></div>
+        <button class="songs__ play">
+          <img src="/images/play-button.svg" alt="" srcset="">
+        </button>
+        <button class="songs__ favorite">
+          <svg width="26" height="27" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M19 2c-2 0-4 1-5 3l-1 1-1-1c-1-2-3-3-5-3-4 0-7 4-7 8 0 5 4 9 12 14a1 1 0 0 0 2 0c8-5 12-9 12-14 0-4-3-8-7-8Zm2 14-8 6-8-6-3-6c0-3 2-5 5-5l4 1 1 3a1 1 0 0 0 2 0l1-2c1-2 2-2 4-2 3 0 5 2 5 5l-3 6Z"/>
+          </svg>
+        </button>
+        <button class="songs__ menu">
+          <div class="menu">
+            <div class="menu__dot"></div>
+            <div class="menu__dot"></div>
+            <div class="menu__dot"></div>
+          </div>
+        </button>
       </div>
       <div class="songs__list">
         <div class="song">
@@ -50,11 +63,10 @@
                 <img src="./images/more-menu.png" alt="" srcset="">
             </div>
         </div>
-          <div class="artists"></div>
-        </div>
       </div>
     </div>
   </div>
+</div>
 
   <script type="module" src="/src/global-scripts/main.js"></script>
   <script type="module" src="/src/pages/playlist-page/scripts/playlist-page.js"></script>
