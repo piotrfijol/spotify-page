@@ -1,0 +1,21 @@
+.menu {
+
+    &__dot {
+        display: inline-block;
+        border-radius: 50%;
+        width: 3.83px;
+        height: 3.83px;
+        background-color: #bfbfbf;
+        margin-right: 1px;
+    }
+
+    &__dot:last-child {
+        margin-right: 0;
+    }
+}
+
+.menu:hover .menu__dot {
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    background-color: #FEFEFE;
+}
