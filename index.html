@@ -9,11 +9,53 @@
 </head>
 
 <body>
+  <nav>
+    
+  </nav>
   <div id="playlist-page">
+    <div class="info">
+      <div class="info__wrapper">
+        <div class="info__ category">Playlist</div>
+        <div class="info__ title">Top songs of the world</div>
+        <div class="info__ description">Popular songs of Dua Lipa and many many others</div>
+      </div>
+    </div>
+    <div class="songs">
+      <div class="songs__action-buttons">
+        <div class="songs__ play"></div>
+        <div class="songs__ favorite"></div>
+        <div class="songs__ menu"></div>
+      </div>
+      <div class="songs__list">
+        <div class="song">
+            <div class="song__number">01</div>
+            <div class="song__main">
+                <img src="./images/album-1.png" alt="" srcset="">
+                <div class="song__info name">
+                    <p class="info__ label">Flowers</p>
+                    <p class="info__ data">Flowers</p>
+                </div>
+            </div>
+            <div class="song__info author">
+                <p class="info__ label">Artists</p>
+                <p class="info__ data">Miley Cyrus</p>
+            </div>
+            <div class="song__info duration">
+                <p class="info__ label">Time</p>
+                <p class="info__ data">3:20</p>
+            </div>
+            <div class="menu">
+                <img src="./images/more-menu.png" alt="" srcset="">
+            </div>
+        </div>
+          <div class="artists"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script type="module" src="/src/global-scripts/main.js"></script>
-  <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
+  <script type="module" src="/src/pages/playlist-page/scripts/playlist-page.js"></script>
 </body>
 
 </html>
