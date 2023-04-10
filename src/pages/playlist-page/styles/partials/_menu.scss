@@ -1,4 +1,6 @@
 .menu {
+    padding: 16px;
+    border-radius: 50%;
 
     &__dot {
         display: inline-block;
@@ -7,6 +9,7 @@
         height: 3.83px;
         background-color: #bfbfbf;
         margin-right: 1px;
+        transform: translateY(-3px);
     }
 
     &__dot:last-child {
@@ -18,4 +21,9 @@
     transition-duration: 0.1s;
     transition-timing-function: ease-out;
     background-color: #FEFEFE;
+}
+
+.menu:hover {
+    transition: background 0.1s ease-out;
+    background-color: rgba(255, 255, 255, 0.05);
 }

@@ -20,6 +20,7 @@
 
         &__wrapper > * {
             margin-top: 16px;
+            display: block;
         }
 
         &__wrapper > div:first-child {
@@ -27,10 +28,11 @@
         }
 
         &__.category {
-            font-size: 1rem;
+            font-size: 1.125rem;
         }
         
         &__.title {
+            max-width: 54.5%;
             font-size: 3rem;
             font-weight: 700;
             line-height: 100%;
@@ -49,7 +51,7 @@
         }
 
         &__action-buttons > * {
-            margin-left: 32px;
+            margin-left: 16px;
         }
 
         &__action-buttons > button:first-child {
@@ -86,16 +88,33 @@
         &__.favorite {
             display: flex;
             align-items: center;
+            padding: 0 16px;
         
             svg {
                 fill: #BFBFBF;
             }
         }
 
+        &__.favorite:hover {
+            transition: background 0.1s ease-out;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
         &__.favorite:hover svg {
             transition-duration: 0.1s;
             transition-timing-function: ease-out;
             fill: #FEFEFE;
+        }
+
+        &__list {
+            margin-top: 24px;
+        }
+
+        .song:hover {
+            transition-duration: 0.1s;
+            transition-timing-function: ease-out;
+            cursor: pointer;
+            background-color: #292929;
         }
 
         .song {
@@ -111,7 +130,6 @@
             border-radius: 17px;
             background-color: #18181C;
             color: #BFBFBF;
-        
 
             &__number {
                 font-size: 18px;
@@ -188,7 +206,21 @@
 @media (min-width: 1024px) {
 
     #playlist-page {
+        .info {
+            
+            &__.title {
+                font-size: 4.25rem;
+            }
+        }
         .songs {
+            padding-left: 50px;
+            padding-right: 50px;
+
+
+            &__list {
+                margin-top: 32px;
+            }
+
             .song {
                 grid-template-columns: 22px 12.4fr 11fr 7fr 1fr;
                 column-gap: 32px;
