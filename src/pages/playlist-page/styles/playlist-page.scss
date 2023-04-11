@@ -58,10 +58,6 @@
             margin-left: 0;
         }
 
-        &__action-buttons > .menu {
-            margin-left: 0;
-        }
-
         &__action-buttons > button {
             padding: 0;
             box-sizing: border-box;
@@ -266,7 +262,7 @@
                 margin-top: 32px;
 
                 .song {
-                    grid-template-columns: 22px 12.4fr 11fr 7fr 1fr;
+                    grid-template-columns: 22px 13.4fr 11fr 3fr 1fr;
                     column-gap: 32px;
                     padding-left: 50px;
                     padding-right: 50px;
@@ -287,12 +283,22 @@
 
                     &__menu {
                         grid-column: 6;
+                        visibility: hidden;
+                    }
+
+                    &__menu .menu {
+                        box-sizing: border-box;
                     }
                     
                     &__.favorite {
                         display: block;
                     }
+
+                    &:hover .song__menu {
+                        visibility: visible;
+                    }
                 }
+
             }
         }
     }
