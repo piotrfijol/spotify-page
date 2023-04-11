@@ -1,9 +1,18 @@
 import { appendChildren, createElement } from "../../../global-scripts/scripts/dom";
+import heartIcon from "../../../assets/heart.svg";
 
 function createSongMenu() {
     let menuContainer = createElement('div', '', 'song__menu');
     let menu = createElement('div', '', 'menu');
     let menuDot = createElement('div', '', 'menu__dot');
+    
+    let menuFavorite = createElement('div', '', 'song__ favorite');
+    let heartImage = new Image();
+    heartImage.src = heartIcon;
+    
+    menuFavorite.appendChild(
+        heartImage
+    )
 
     appendChildren(
         menu,
@@ -12,6 +21,7 @@ function createSongMenu() {
         menuDot.cloneNode()
     );
 
+    menuContainer.appendChild(menuFavorite);
     menuContainer.appendChild(menu);
 
     return menuContainer;

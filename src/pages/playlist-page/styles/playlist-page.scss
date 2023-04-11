@@ -58,6 +58,10 @@
             margin-left: 0;
         }
 
+        &__action-buttons > .menu {
+            margin-left: 0;
+        }
+
         &__action-buttons > button {
             padding: 0;
             box-sizing: border-box;
@@ -131,6 +135,33 @@
             background-color: #18181C;
             color: #BFBFBF;
 
+            &__.favorite {
+                width: 24px;
+                height: 24px;
+                margin-right: 2px;
+                background: none;
+                border: none;
+                padding: 16px;
+                border-radius: 50%;
+                display: none;
+                
+                svg {
+                    fill: #BFBFBF;
+                }
+            }
+
+            &__.favorite:hover {
+                transition: background 0.1s ease-out;
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+
+            &__.favorite:hover svg {
+                transition-duration: 0.1s;
+                transition-timing-function: ease-out;
+                fill: #FEFEFE;
+            }
+
+
             &__number {
                 font-size: 18px;
             }
@@ -138,6 +169,15 @@
             &__main {
                 display: flex;
                 align-items: center;
+            }
+            
+            &__main .data {
+                width: 120px;
+                white-space: nowrap;                
+                overflow: hidden;                
+                text-overflow: ellipsis;
+                display: block;
+                  
             }
 
             &__main > img {
@@ -168,8 +208,10 @@
             }
 
             &__menu {
-                grid-column: 4;
-                align-self: center;
+                justify-self: end;
+                display: flex;
+                min-width: 50px;
+                align-items: center;
                 
                 .menu__dot {
                     width: 3px;
@@ -207,36 +249,49 @@
 
     #playlist-page {
         .info {
-            
+
+            &__wrapper {
+                padding: 3.125rem;
+            }
+
             &__.title {
                 font-size: 4.25rem;
             }
         }
         .songs {
-            padding-left: 50px;
-            padding-right: 50px;
+            padding: 32px 50px;
 
 
             &__list {
                 margin-top: 32px;
-            }
 
-            .song {
-                grid-template-columns: 22px 12.4fr 11fr 7fr 1fr;
-                column-gap: 32px;
-                padding-left: 50px;
-                padding-right: 50px;
+                .song {
+                    grid-template-columns: 22px 12.4fr 11fr 7fr 1fr;
+                    column-gap: 32px;
+                    padding-left: 50px;
+                    padding-right: 50px;
 
-                &__info.duration {
-                    display: block !important;
-                }
 
-                &__thumbnail img {
-                    margin-right: 32px;
-                }
+                    &__main .data {
+                        overflow: visible !important;
+                        text-overflow: unset;
+                    }
+                    
+                    &__info.duration {
+                        display: block !important;
+                    }
 
-                &__menu {
-                    grid-column: 6;
+                    &__thumbnail img {
+                        margin-right: 32px;
+                    }
+
+                    &__menu {
+                        grid-column: 6;
+                    }
+                    
+                    &__.favorite {
+                        display: block;
+                    }
                 }
             }
         }
